@@ -20,12 +20,14 @@
     <Editor {html} on:change={(evt)=>html = evt.detail}/>
 </Modal>
 
+base: {base}
 
 {@html html}
 <Editor {html} on:change={(evt)=>html = evt.detail}/>
 
 
 <script lang="ts">
+    import { base } from '$app/paths';
     import Modal from "$lib/Modal.svelte";
 
     let my_modal_1: HTMLDialogElement;
